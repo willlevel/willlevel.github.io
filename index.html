@@ -16,14 +16,11 @@ body, html {
 }
 
 .bgimg {
-  background-image: url('back.jpg');
-  height: 100%;
+  background-image: url(back.jpg);
+  min-height: 100%;
   background-position: center;
   background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  background-color:rgb(214, 107, 166);
 }
 
 .topleft {
@@ -32,11 +29,6 @@ body, html {
   left: 16px;
 }
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
 
 .middle {
   position: absolute;
@@ -64,68 +56,51 @@ img {
 
 
 </style>
+
 <body>
+  <div class="bgimg">
 
-<div class="bgimg">
-  <div class="topleft">
-    <p><img src="logo.png" alt="logo"> </p>
-  </div>
-  
 
-  <div class="middle">
+<div class="middle">
     
-    <a href="ep1.html">   <img style="" src="click.png" alt="click">  </a>
+    <a>   <img style="" src="click.png" alt="click">  </a>
      <br>
     
     
-  
-
     <br>
     <hr>
     
-    <p>WELCOME TO THE DOOOS, AN INFORMATION WEBSITE, TIME TILL EXPIRATION: </p>
+    <p>WELCOME TO THE DOOOS, AN INFORMATION WEBSITE </p>
     
    <p id="demo"></p>
-    <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+<form>
+    <label for="pswd" >Enter your password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
 
-  // Get today's date and time
-  var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-  </div>
-  <div class="bottomleft">
-   
-  </div>
 </div>
-
 </body>
 
-   
+
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="welcome.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
+
+
+
+
 
 
 
@@ -135,11 +110,3 @@ var x = setInterval(function() {
 
 
 </html>
-
-
-
-
-
- 
-
-
