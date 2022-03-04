@@ -1,86 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Simpsons</title>
+<title>THE Videos of the COSDF</title>
+<link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+
+
+
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .bgimg {
-  background-image: url(back.jpg);
-  min-height: 100%;
+  background-image: url('back.jpg');
+  height: 100%;
   background-position: center;
   background-size: cover;
-  background-color:rgb(214, 107, 166);
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
 }
- 
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+.box {
+  width: 30%;
+  height: 200px;
+  border: 5px dashed #f7a239;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+
 </style>
-</head>
 <body>
- 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topcenter w3-padding-large w3-xlarge,vertical-align:middle">
-   
-    <img src="logo.png" alt="logo",  "> 
-  </div>
-  <div class="col-6 col-s-9">
-   
 
-    <h3> &nbsp SIMPSONS Season 1 Episode 1</h2>
-    <video width="400" controls>
-      <source src="videos/1.mkv" type="video/mp4">
-      <source src="videos/1.ogg" type="video/ogg">
-      Your browser does not support HTML5 video.
-    </video>
+<div class="bgimg">
+  <div class="topleft">
+    <p><img src="logo.png" alt="logo"> </p>
   </div>
-  <div style="text-align: center;" >
-  <a href="#" class="previous round">&#8249;</a>
-  <a href="ep2.html" class="next round">&#8250;</a>
-</div>
-<br>
-<br>
-<div style="text-align: center; " >
-   
-   
-   
-  <ul>
-    <a class="active" href="#home"><h3>Index and Episodes</h3></a>
+  
+
+  <div class="middle">
+    
+    <a href="ep1.html">   <img style="" src="click.png" alt="click">  </a>
+     <br>
+    
+    
+  
+
     <br>
-     <a href="ep1.html">Season 1 Episode 1</a>
-     <br>
-     <a href="ep2.html">Season 1 Episode 2</a>
-     <br>
-     <a href="ep3.html">Season 1 Episode 3</a>
-     <br>
-     <a href="ep4.html">Season 1 Episode 4</a>
-     <br>
-     <a href="ep5.html">Season 1 Episode 5</a>  
-     <br>
-     <a href="ep6.html">Season 1 Episode 6</a>
-     <br>
-     <a href="ep7.html">Season 1 Episode 7</a>
-     <br>
-     <a href="ep8.html">Season 1 Episode 8</a>  
-     <br>
-     <a href="ep9.html">Season 1 Episode 9</a>  
-     <br>
-     <a href="ep10.html">Season 1 Episode 10</a>    
-   </ul>
+    <hr>
+    
+    <p>WELCOME TO THE DOOOS, AN INFORMATION WEBSITE, TIME TILL EXPIRATION: </p>
+    
+   <p id="demo"></p>
+    <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
   </div>
-
+  <div class="bottomleft">
+   
+  </div>
 </div>
 
 </body>
+
+   
+
+
+
+
+
+
+
+
 </html>
+
+
+
+
+
+ 
+
+
